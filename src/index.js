@@ -4,9 +4,13 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import simpleAction from './actions/simple';
 import cfgStore from './store';
 
 const store = cfgStore();
+console.log(store.getState());
+console.log(store.dispatch(simpleAction()));
+console.log(store.getState());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
